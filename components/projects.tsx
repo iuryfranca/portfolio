@@ -16,11 +16,11 @@ export function Projects() {
 					<BlurFade delay={0.25} inView>
 						<div className="flex flex-col">
 							<div className="flex flex-col gap-2">
-								<h2 className="w-full max-w-4xl font-semibold text-lg md:text-3xl mb-3">
+								<h2 className='mb-3 w-full max-w-4xl font-semibold text-lg md:text-3xl'>
 									the-movie-db-challenge-next-13
 								</h2>
 
-								<p className="text-muted-foreground text-xs md:text-sm font-normal mb-8">
+								<p className='mb-8 font-normal text-muted-foreground text-xs md:text-sm'>
 									Nesse projeto eu estava reaprendendo desenvolvimento web
 									depois de 1 ano longe da área. Coloquei todo o meu foco em
 									tecnologias mais populares da época e fiz esse pequeno e
@@ -28,7 +28,7 @@ export function Projects() {
 								</p>
 							</div>
 
-							<div className="grid grid-rows-2 md:grid-cols-2 gap-4 md:grid-rows-none">
+							<div className='grid grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-none'>
 								<HeroVideoDialog
 									animationStyle="from-center"
 									videoSrc="https://ik.imagekit.io/iurygfranca/the-movie-next-13/the-movie-next-13-apresentacao.mp4"
@@ -55,17 +55,17 @@ export function Projects() {
 					<BlurFade delay={0.25} inView>
 						<div className="flex flex-col">
 							<div className="flex flex-col gap-2">
-								<h2 className="w-full max-w-4xl font-semibold text-lg md:text-3xl mb-3">
+								<h2 className='mb-3 w-full max-w-4xl font-semibold text-lg md:text-3xl'>
 									the-movie-db-challenge-vue3
 								</h2>
 
-								<p className="text-muted-foreground text-xs md:text-sm font-normal mb-8">
+								<p className='mb-8 font-normal text-muted-foreground text-xs md:text-sm'>
 									A ideia foi fazer a mesma aplicação do projeto anterior, mas
 									agora em Vue 3.
 								</p>
 							</div>
 
-							<div className="grid grid-rows-2 md:grid-cols-2 gap-4 md:grid-rows-none">
+							<div className='grid grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-none'>
 								<HeroVideoDialog
 									animationStyle="from-center"
 									videoSrc="https://ik.imagekit.io/iurygfranca/the-movie-vuejs/the-movie-vue-apresentacao.mp4"

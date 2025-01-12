@@ -53,26 +53,20 @@ export default function Home() {
 			title: 'Github',
 			description: 'Acessar o repositório do projeto',
 			icon: <Github />,
-			link: 'https://github.com/iuryfranca/the-movie-db-challenge-vue3',
+			link: 'https://github.com/iuryfranca',
 		},
 		{
 			title: 'Linkedin',
 			description: 'Acessar o perfil do LinkedIn',
 			icon: <Linkedin />,
-			link: 'https://www.linkedin.com/in/iuryfranca/',
+			link: 'https://www.linkedin.com/in/iury-franca/',
 		},
 		{
 			title: 'Instagram',
 			description: 'Acessar o perfil do Instagram',
 			icon: <Instagram />,
-			link: 'https://www.instagram.com/iuryfranca/',
-		},
-		{
-			title: 'Twitter',
-			description: 'Acessar o perfil do Twitter',
-			icon: <Twitter />,
-			link: 'https://www.twitter.com/iuryfranca/',
-		},
+			link: 'https://www.instagram.com/iuryfrancaa/',
+		}
 	]
 
 	useEffect(() => {
