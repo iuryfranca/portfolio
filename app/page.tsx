@@ -18,7 +18,6 @@ import {
 	LayoutList,
 	Linkedin,
 	Settings,
-	Twitter,
 	UserSearch,
 } from 'lucide-react'
 
