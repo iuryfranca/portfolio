@@ -21,7 +21,14 @@
 		"rules": {
 			"recommended": true,
 			"a11y": {
-				"useButtonType": "off"
+				"useButtonType": "off",
+				"noSvgWithoutTitle": "off"
+			},
+			"nursery": {
+				"useSortedClasses": "info"
+			},
+			"correctness": {
+				"useExhaustiveDependencies": "off"
 			}
 		}
 	},
