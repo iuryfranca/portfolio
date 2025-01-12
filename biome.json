@@ -1,23 +1,45 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "single",
-			"enabled": true,
-			"semicolons": "asNeeded",
-			"lineWidth": 120
-		}
-	},
-	"files": {
-		"ignore": ["tailwind.config.cjs", ".next/*", "node_modules/*"]
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true
-		}
-	}
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": ["node_modules", "dist", "build", ".next", "**/*.json"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "tab"
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "useButtonType": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    }
+  },
+  "overrides": [
+    {
+      "include": ["apps/server/**"],
+      "javascript": {
+        "formatter": {
+          "quoteStyle": "double",
+          "semicolons": "always"
+        }
+      }
+    }
+  ]
 }
