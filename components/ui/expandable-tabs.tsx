@@ -112,7 +112,7 @@ export function ExpandableTabs({
     <TooltipProvider>
       <div
         className={cn(
-          'flex flex-wrap items-center gap-2 rounded-xl border bg-background p-1 shadow-sm',
+          'flex flex-wrap items-center gap-2 rounded-xl border bg-background/80 p-1 shadow-sm backdrop-blur-sm',
           className
         )}>
         {tabs.map((tab) => {

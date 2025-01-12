@@ -3,6 +3,7 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
+import { Projects } from '@/components/projects'
 import { SkillTree } from '@/components/skill-tree'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { ExpandableTabs, type TabItem } from '@/components/ui/expandable-tabs'
@@ -19,21 +20,21 @@ export default function Home() {
   }
 
   const tabs = [
-    { title: 'Home', icon: HomeIcon, id: 'home' },
+    { title: 'Início', icon: HomeIcon, id: 'home' },
     { type: 'separator', id: 'separator-1' },
-    { title: 'Projects', icon: LayoutList, id: 'projects' },
+    { title: 'Projetos', icon: LayoutList, id: 'projects' },
     { title: 'Sobre', icon: UserSearch, id: 'sobre' },
     { title: 'Settings', icon: Settings, id: 'settings' },
   ] as TabItem[]
 
   const words = [
+    { word: 'FullStack Pleno', color: '#FFFFFF' },
+    { word: 'Angular Pleno', color: '#F4084E' },
     { word: 'React Pleno', color: '#58C4DC' },
     { word: 'Vue Pleno', color: '#41B883' },
-    { word: 'Angular Pleno', color: '#F4084E' },
     { word: 'Mobile Júnior', color: '#ff9500' },
-    { word: 'Python Júnior', color: '#fbff00' },
     { word: '.NET Intermediário', color: '#9d3dbc' },
-    { word: 'FullStack Pleno', color: '#FFFFFF' },
+    { word: 'Python Júnior', color: '#fbff00' },
   ] as WordsProps[]
 
   useEffect(() => {
@@ -41,9 +42,9 @@ export default function Home() {
   }, [theme])
 
   return (
-    <div className='relative flex min-h-screen flex-col items-center justify-start gap-8 overflow-hidden bg-gradient-to-b from-10% from-background to-slate-900'>
+    <div className='relative flex min-h-screen flex-col items-center justify-start gap-8 overflow-hidden bg-gradient-to-b from-10% from-background to-slate-800'>
       <div
-        className='relative flex h-[700px] w-full flex-col items-center justify-center'
+        className='relative flex h-[850px] md:h-[700px] w-full flex-col items-center justify-center'
         id='home'
         data-section>
         <Particles
@@ -57,22 +58,22 @@ export default function Home() {
         <div className='flex h-full w-full flex-col items-center justify-center gap-12'>
           <div className='flex max-w-80 flex-col items-center justify-center sm:max-w-96 lg:max-w-md'>
             <BlurFade delay={0.25} inView className='w-full'>
-              <h2 className='font-bold text-4xl tracking-tighter sm:text-5xl xl:text-6xl/none'>
+              <h2 className='font-bold text-5xl tracking-tighter sm:text-6xl xl:text-7xl/none'>
                 Hello World 👋
               </h2>
             </BlurFade>
 
             <BlurFade delay={0.25 * 2} inView className='w-full'>
-              <span className='text-pretty text-2xl tracking-tighter sm:text-3xl xl:text-4xl/none'>
+              <span className='text-pretty text-3xl tracking-tighter sm:text-4xl xl:text-5xl/none'>
                 Me chamo Iury França
               </span>
             </BlurFade>
           </div>
 
           <BlurFade delay={0.25 * 3} inView className='w-full'>
-            <div className='flex max-w-80 flex-col items-center justify-center gap-2 sm:max-w-none sm:flex-row'>
+            <div className='flex flex-col items-center justify-center gap-2 sm:max-w-none sm:flex-row'>
               <span className=' text-black dark:text-white'>
-                tenho 5 anos de experiência e me considero{' '}
+                Tenho 5 anos de experiência e me considero{' '}
               </span>
               <WordRotate
                 className=' text-black dark:text-white'
@@ -83,29 +84,16 @@ export default function Home() {
           </BlurFade>
         </div>
 
-        <ExpandableTabs tabs={tabs} className='fixed top-2 right-2 z-50' />
+        <ExpandableTabs tabs={tabs} className='fixed top-3 right-3 z-50' />
       </div>
 
-      <div
-        className='relative mx-auto mb-36 flex h-full w-full max-w-6xl flex-col items-center justify-center'
-        id='projects'
-        data-section>
-        <div className='flex flex-col items-center justify-center gap-2'>
-          <h2 className='font-bold text-4xl tracking-tighter sm:text-5xl xl:text-6xl/none'>
-            Projetos
-          </h2>
-        </div>
-
-        <div className='flex h-[2000px] flex-col items-center justify-center gap-2'>
-          hello world
-        </div>
-      </div>
+      <Projects />
 
       <div
         className='relative mx-auto mb-20 flex h-[400px] w-full max-w-6xl flex-col items-center justify-center'
         id='sobre'
         data-section>
-        <BlurFade delay={0.25 * 2} inView className='w-full'>
+        <BlurFade delay={0.25} inView className='w-full'>
           <SkillTree />
         </BlurFade>
       </div>

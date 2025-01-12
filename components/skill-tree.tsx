@@ -24,6 +24,7 @@ function DockerIcon() {
       src='https://www.docker.com/wp-content/uploads/2024/01/icon-docker-square.svg'
       alt='Docker'
       fill
+      priority={true}
     />
   )
 }
@@ -32,8 +33,8 @@ function VercelIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox='0 0 256 222'
-      width='256'
-      height='222'
+      width='150'
+      height='150'
       xmlns='http://www.w3.org/2000/svg'
       preserveAspectRatio='xMidYMid'
       {...props}>
@@ -45,8 +46,8 @@ function VercelIcon(props: SVGProps<SVGSVGElement>) {
 const TypeScriptIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox='0 0 256 256'
-    width={256}
-    height={256}
+    width={150}
+    height={150}
     xmlns='http://www.w3.org/2000/svg'
     preserveAspectRatio='xMidYMid'
     {...props}>
@@ -65,8 +66,8 @@ function SupabaseIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox='0 0 109 113'
-      width='109'
-      height='113'
+      width='80'
+      height='90'
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
       {...props}>
@@ -133,8 +134,8 @@ const TailwindCSSIcon = (props: SVGProps<SVGSVGElement>) => (
 
 const NextjsIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={180}
-    height={180}
+    width={120}
+    height={120}
     viewBox='0 0 180 180'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
@@ -358,8 +359,8 @@ const GCOMIcon1 = () => (
 
 const GCOMIcon2 = () => (
   <svg
-    width='85'
-    height='85'
+    width='80'
+    height='80'
     viewBox='0 0 153 153'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'>
@@ -458,8 +459,8 @@ const GCOMIcon2 = () => (
 
 const GiraffasIcon = () => (
   <svg
-    width='85'
-    height='85'
+    width='80'
+    height='80'
     viewBox='0 0 204 203'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'>
@@ -479,8 +480,8 @@ const GiraffasIcon = () => (
 )
 
 const AndroidIcon = () => (
-  <svg xmlns='http://www.w3.org/2000/svg' width='97' height='96' fill='none'>
-    <g clip-path='url(#a)'>
+  <svg xmlns='http://www.w3.org/2000/svg' width='100' height='70' fill='none'>
+    <g clipPath='url(#a)'>
       <mask
         id='b'
         width='77'
@@ -498,14 +499,14 @@ const AndroidIcon = () => (
         <g filter='url(#d)' opacity='.8'>
           <path
             fill='url(#e)'
-            fill-opacity='.4'
+            fillOpacity='.4'
             d='M51.345 38.826c8.232 5.806-14.937 6.444-23.888 19.133-8.95 12.69-1.776 34.73-10.008 28.924-5.083-6.97-5.857-21.11 3.094-33.8 8.95-12.69 23.82-16.86 30.802-14.257Z'
           />
         </g>
         <g filter='url(#f)' opacity='.7'>
           <path
             fill='url(#g)'
-            fill-opacity='.4'
+            fillOpacity='.4'
             d='M48.862 39.06c-7.532 5.448 13.667 6.047 21.857 17.955 8.19 11.908 1.625 32.59 9.157 27.142 4.65-6.541 5.358-19.81-2.831-31.718-8.19-11.909-21.794-15.821-28.183-13.38Z'
           />
         </g>
@@ -535,13 +536,13 @@ const AndroidIcon = () => (
         </g>
         <path
           fill='url(#l)'
-          fill-opacity='.9'
+          fillOpacity='.9'
           d='M19.173 28.582c.59 2.041 3.018 3.133 5.42 2.438 2.403-.696 3.871-2.915 3.28-4.957-.59-2.041-3.017-3.133-5.42-2.438-2.403.696-3.871 2.915-3.28 4.957Z'
           opacity='.15'
         />
         <path
           fill='url(#m)'
-          fill-opacity='.9'
+          fillOpacity='.9'
           d='M68.855 28.808c.59 2.042 3.018 3.134 5.42 2.438 2.403-.695 3.871-2.914 3.28-4.956-.59-2.042-3.017-3.133-5.42-2.438-2.403.695-3.871 2.914-3.28 4.956Z'
           opacity='.15'
         />
@@ -596,12 +597,12 @@ const AndroidIcon = () => (
       </g>
       <path
         fill='url(#t)'
-        fill-opacity='.7'
+        fillOpacity='.7'
         d='M32.57 56.383c.472-.534.074-1.666-.887-2.53-.96-.864-2.121-1.132-2.592-.599-.47.533-.074 1.666.887 2.53.961.864 2.122 1.132 2.593.599Z'
       />
       <path
         fill='url(#u)'
-        fill-opacity='.7'
+        fillOpacity='.7'
         d='M65.59 55.02c.962-.865 1.36-1.997.888-2.53-.47-.534-1.631-.266-2.592.598-.961.864-1.358 1.997-.888 2.53.471.533 1.632.265 2.593-.599Z'
       />
       <path
@@ -649,9 +650,9 @@ const AndroidIcon = () => (
         height='57.835'
         x='9.655'
         y='34.046'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -664,9 +665,9 @@ const AndroidIcon = () => (
         height='54.771'
         x='43.228'
         y='34.325'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -679,9 +680,9 @@ const AndroidIcon = () => (
         height='76.559'
         x='-14.479'
         y='20.735'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -694,9 +695,9 @@ const AndroidIcon = () => (
         height='76.559'
         x='49.682'
         y='20.735'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -709,9 +710,9 @@ const AndroidIcon = () => (
         height='19.654'
         x='17.205'
         y='23.868'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -724,9 +725,9 @@ const AndroidIcon = () => (
         height='50.567'
         x='2.268'
         y='6.53'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -739,9 +740,9 @@ const AndroidIcon = () => (
         height='19.816'
         x='65.243'
         y='23.971'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -754,9 +755,9 @@ const AndroidIcon = () => (
         height='5.787'
         x='60.176'
         y='35.954'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -769,9 +770,9 @@ const AndroidIcon = () => (
         height='5.849'
         x='28.961'
         y='36.168'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -784,9 +785,9 @@ const AndroidIcon = () => (
         height='31.354'
         x='55.535'
         y='14.99'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
         filterUnits='userSpaceOnUse'>
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape' />
         <feGaussianBlur
           result='effect1_foregroundBlur_18016_147346'
@@ -800,9 +801,9 @@ const AndroidIcon = () => (
         r='1'
         gradientTransform='matrix(-.81905 35.21948 -55.91098 -1.30024 48.088 56.388)'
         gradientUnits='userSpaceOnUse'>
-        <stop offset='.307' stop-color='#4FAF53' />
-        <stop offset='1' stop-color='#118016' />
-        <stop offset='1' stop-color='#4FAF53' stop-opacity='0' />
+        <stop offset='.307' stopColor='#4FAF53' />
+        <stop offset='1' stopColor='#118016' />
+        <stop offset='1' stopColor='#4FAF53' stopOpacity='0' />
       </radialGradient>
       <radialGradient
         id='l'
@@ -811,8 +812,8 @@ const AndroidIcon = () => (
         r='1'
         gradientTransform='rotate(163.34 9.761 15.383)scale(2.84692 2.06303)'
         gradientUnits='userSpaceOnUse'>
-        <stop stop-color='#fff' />
-        <stop offset='.948' stop-color='#fff' stop-opacity='0' />
+        <stop stopColor='#fff' />
+        <stop offset='.948' stopColor='#fff' stopOpacity='0' />
       </radialGradient>
       <radialGradient
         id='m'
@@ -821,8 +822,8 @@ const AndroidIcon = () => (
         r='1'
         gradientTransform='rotate(163.34 34.586 19.134)scale(2.84692 2.06303)'
         gradientUnits='userSpaceOnUse'>
-        <stop stop-color='#fff' />
-        <stop offset='.948' stop-color='#fff' stop-opacity='0' />
+        <stop stopColor='#fff' />
+        <stop offset='.948' stopColor='#fff' stopOpacity='0' />
       </radialGradient>
       <radialGradient
         id='t'
@@ -831,8 +832,8 @@ const AndroidIcon = () => (
         r='1'
         gradientTransform='rotate(132.973 4.405 34.714)scale(1.00274 1.82527)'
         gradientUnits='userSpaceOnUse'>
-        <stop stop-color='#93E19F' />
-        <stop offset='1' stop-color='#93E19F' stop-opacity='0' />
+        <stop stopColor='#93E19F' />
+        <stop offset='1' stopColor='#93E19F' stopOpacity='0' />
       </radialGradient>
       <radialGradient
         id='u'
@@ -841,8 +842,8 @@ const AndroidIcon = () => (
         r='1'
         gradientTransform='matrix(.68292 .73303 -1.33486 1.2436 65.193 53.949)'
         gradientUnits='userSpaceOnUse'>
-        <stop stop-color='#93E19F' />
-        <stop offset='1' stop-color='#93E19F' stop-opacity='0' />
+        <stop stopColor='#93E19F' />
+        <stop offset='1' stopColor='#93E19F' stopOpacity='0' />
       </radialGradient>
       <linearGradient
         id='e'
@@ -851,8 +852,8 @@ const AndroidIcon = () => (
         y1='52.772'
         y2='60.883'
         gradientUnits='userSpaceOnUse'>
-        <stop stop-color='#A8F0B9' />
-        <stop offset='1' stop-color='#ADEEBC' stop-opacity='0' />
+        <stop stopColor='#A8F0B9' />
+        <stop offset='1' stopColor='#ADEEBC' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='g'
@@ -861,8 +862,8 @@ const AndroidIcon = () => (
         y1='53.619'
         y2='59.542'
         gradientUnits='userSpaceOnUse'>
-        <stop stop-color='#A8F0B9' />
-        <stop offset='1' stop-color='#ADEEBC' stop-opacity='0' />
+        <stop stopColor='#A8F0B9' />
+        <stop offset='1' stopColor='#ADEEBC' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='v'
@@ -871,8 +872,8 @@ const AndroidIcon = () => (
         y1='51.668'
         y2='55.071'
         gradientUnits='userSpaceOnUse'>
-        <stop stop-color='#E2DDE2' />
-        <stop offset='1' stop-color='#E2DDE2' stop-opacity='0' />
+        <stop stopColor='#E2DDE2' />
+        <stop offset='1' stopColor='#E2DDE2' stopOpacity='0' />
       </linearGradient>
       <linearGradient
         id='w'
@@ -881,8 +882,8 @@ const AndroidIcon = () => (
         y1='53.06'
         y2='55.882'
         gradientUnits='userSpaceOnUse'>
-        <stop stop-color='#373637' />
-        <stop offset='1' stop-color='#373637' stop-opacity='0' />
+        <stop stopColor='#373637' />
+        <stop offset='1' stopColor='#373637' stopOpacity='0' />
       </linearGradient>
       <clipPath id='a'>
         <path fill='#fff' d='M.5 0h96v96H.5z' />
@@ -894,8 +895,8 @@ const AndroidIcon = () => (
 const FirebaseIcon = () => (
   <svg
     fill='none'
-    height='91'
-    width='73'
+    height='80'
+    width='60'
     viewBox='0 0 73 91'
     xmlns='http://www.w3.org/2000/svg'>
     <path
@@ -944,6 +945,7 @@ const AngularIcon = () => (
     alt='Angular'
     width={100}
     height={100}
+    priority={true}
   />
 )
 
