@@ -8,18 +8,18 @@ import { BlurFade } from '@/components/ui/blur-fade'
 import { ExpandableTabs, type TabItem } from '@/components/ui/expandable-tabs'
 import { Particles } from '@/components/ui/particles'
 import { WordRotate, type WordsProps } from '@/components/ui/word-rotate'
-import { HelpCircle, HomeIcon, LayoutList, Settings } from 'lucide-react'
+import {  HomeIcon, LayoutList, Settings, UserSearch } from 'lucide-react'
 
 export default function Home() {
   const { theme } = useTheme()
   const [color, setColor] = useState('#000000')
 
   const tabs = [
-    { title: 'Home', icon: HomeIcon },
+    { title: 'Home', icon: HomeIcon, id: 'home' },
     { type: 'separator' },
-    { title: 'Projects', icon: LayoutList },
-    { title: 'Sobre', icon: HelpCircle },
-    { title: 'Settings', icon: Settings },
+    { title: 'Projects', icon: LayoutList, id: 'projects' },
+    { title: 'Sobre', icon: UserSearch, id: 'sobre' },
+    { title: 'Settings', icon: Settings, id: 'settings' },
   ] as TabItem[]
 
 	const words = [
@@ -35,8 +35,8 @@ export default function Home() {
   }, [theme])
 
   return (
-    <div className='relative flex min-h-screen flex-col items-center justify-start gap-8 overflow-hidden bg-gradient-to-b from-60% from-background to-slate-900'>
-      <div className='relative flex h-[700px] w-full flex-col items-center justify-center'>
+    <div className='relative flex min-h-screen flex-col items-center justify-start gap-8 overflow-hidden bg-gradient-to-b from-10% from-background to-slate-900'>
+      <div className='relative flex h-[700px] w-full flex-col items-center justify-center' id='home' data-section>
         <Particles
           quantity={200}
           ease={80}
@@ -45,7 +45,7 @@ export default function Home() {
           refresh
         />
 
-        <div className='flex h-full w-full gap-12 flex-col items-center justify-center'>
+        <div className='flex h-full w-full flex-col items-center justify-center gap-12'>
           <div className='flex max-w-80 flex-col items-center justify-center sm:max-w-96 lg:max-w-md'>
             <BlurFade delay={0.25} inView className='w-full'>
               <h2 className='font-bold text-4xl tracking-tighter sm:text-5xl xl:text-6xl/none'>
@@ -60,8 +60,8 @@ export default function Home() {
             </BlurFade>
           </div>
 
-          <div className='max-w-80 flex-col flex sm:flex-row sm:max-w-none gap-2 items-center justify-center'>
-						<span className=' text-black dark:text-white'>Tenho 5 anos de experiência e me considero </span>
+          <div className='flex max-w-80 flex-col items-center justify-center gap-2 sm:max-w-none sm:flex-row'>
+						<span className=' text-black dark:text-white'>tenho 5 anos de experiência e me considero </span>
             <WordRotate
               className=' text-black dark:text-white'
               words={words}
@@ -71,8 +71,20 @@ export default function Home() {
 
         <ExpandableTabs tabs={tabs} className='fixed top-2 right-2 z-50' />
       </div>
+			
+      <div className='relative mx-auto mb-36 flex h-full w-full max-w-6xl flex-col items-center justify-center' id='projects' data-section>
+				<div className='flex flex-col items-center justify-center gap-2'>
+					<h2 className='font-bold text-4xl tracking-tighter sm:text-5xl xl:text-6xl/none'>
+						Projetos
+					</h2>
+				</div>
 
-      <div className='relative mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-center mb-36'>
+				<div className='flex h-[2000px] flex-col items-center justify-center gap-2'>
+					hello world
+				</div>
+			</div>
+
+      <div className='relative mx-auto mb-20 flex h-[400px] w-full max-w-6xl flex-col items-center justify-center' id='sobre' data-section>
 				<SkillTree />
       </div>
     </div>

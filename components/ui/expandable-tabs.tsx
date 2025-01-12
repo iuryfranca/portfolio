@@ -3,7 +3,6 @@
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import type { LucideIcon } from 'lucide-react'
-import { usePathname, useRouter } from 'next/navigation'
 import * as React from 'react'
 
 import {
@@ -14,6 +13,7 @@ import {
 } from '@/components/ui/tooltip'
 
 interface Tab {
+  id: string
   title: string
   icon: LucideIcon
   type?: never
@@ -21,8 +21,7 @@ interface Tab {
 
 interface Separator {
   type: 'separator'
-  title?: never
-  icon?: never
+  id: string
 }
 
 export type TabItem = Tab | Separator
@@ -31,7 +30,7 @@ interface ExpandableTabsProps {
   tabs: TabItem[]
   className?: string
   activeColor?: string
-  onChange?: (index: number | null) => void
+  onChange?: (id: string | null) => void
 }
 
 const buttonVariants = {
@@ -61,34 +60,49 @@ export function ExpandableTabs({
   activeColor = 'text-primary',
   onChange,
 }: ExpandableTabsProps) {
-  const path = usePathname()
-  const router = useRouter()
-  const currentPath = path === '/' ? 'home' : path
 
-  const [selected, setSelected] = React.useState<number | null>(null)
-  const outsideClickRef = React.useRef(null)
+  const [activeTabId, setActiveTabId] = React.useState(
+    'home'
+  )
 
   React.useEffect(() => {
-    const activeIndex = tabs.findIndex(
-      (tab) => tab.title?.toLocaleLowerCase() === currentPath
-    )
-    handleSelect(activeIndex)
-  }, [currentPath, tabs])
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('[data-section]')
+      let currentTabId: string | null = null
 
-  // useOnClickOutside(outsideClickRef, () => {
-  //   setSelected(null)
-  //   onChange?.(null)
-  // })
+      // biome-ignore lint/complexity/noForEach: <explanation>
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect()
+        const isVisible = rect.top <= window.innerHeight && rect.bottom >= 0
 
-  const handleSelect = (index: number) => {
-    if (!tabs[index].title) return
+        if (isVisible) {
+          currentTabId = section.id
+        }
+      })
 
-    setSelected(index)    
-    onChange?.(index)
-
-    if (tabs[index].title !== 'Home') {
-      router.push(tabs[index].title.toLocaleLowerCase())
+      setActiveTabId(currentTabId ?? 'home')
+      onChange?.(currentTabId)
     }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  const handleSelect = (tabId: string) => {
+    setActiveTabId(tabId)
+
+    setTimeout(() => {
+      const element = document.getElementById(tabId)
+
+      console.log(activeTabId, element)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 500);
+
   }
 
   const Separator = () => (
@@ -98,30 +112,30 @@ export function ExpandableTabs({
   return (
     <TooltipProvider>
       <div
-        ref={outsideClickRef}
         className={cn(
           'flex flex-wrap items-center gap-2 rounded-xl border bg-background p-1 shadow-sm',
           className
         )}>
-        {tabs.map((tab, index) => {
+        {tabs.map((tab) => {
           if (tab.type === 'separator') {
-            // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-            return <Separator key={`separator-${index}`} />
+            return <Separator key={tab.id} />
           }
 
           const Icon = tab.icon
+          const isSelected = activeTabId === tab.id
+
           return (
             <motion.button
-              key={tab.title}
+              key={tab.id}
               variants={buttonVariants}
               initial={false}
               animate='animate'
-              custom={selected === index}
-              onClick={() => handleSelect(index)}
+              custom={isSelected}
+              onClick={() => handleSelect(tab.id)}
               transition={transition}
               className={cn(
                 'relative flex items-center rounded-lg px-4 py-2 text-sm font-medium transition-colors duration-300',
-                selected === index
+                isSelected
                   ? cn('bg-muted', activeColor)
                   : 'text-muted-foreground hover:bg-muted hover:text-foreground'
               )}>
@@ -134,7 +148,7 @@ export function ExpandableTabs({
                 </TooltipContent>
               </Tooltip>
               <AnimatePresence initial={false}>
-                {selected === index && (
+                {isSelected && (
                   <motion.span
                     variants={spanVariants}
                     initial='initial'
