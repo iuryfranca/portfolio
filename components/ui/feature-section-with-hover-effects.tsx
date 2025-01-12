@@ -7,55 +7,22 @@ export interface Feature {
 	link: string
 }
 
+interface FeaturesSectionWithHoverEffectsProps {
+	features: Feature[]
+	className?: string
+}
+
 export function FeaturesSectionWithHoverEffects({
 	features,
-}: {
-	features: Feature[]
-}) {
-	// const features: Feature[] = [
-	//   {
-	//     title: "Ease of use",
-	//     description:
-	//       "It's as easy as using an Apple, and as expensive as buying one.",
-	//     icon: <Eraser />,
-	//   },
-	//   {
-	//     title: "Pricing like no other",
-	//     description:
-	//       "Our prices are best in the market. No cap, no lock, no credit card required.",
-	//     icon: <DollarSign />,
-	//   },
-	//   {
-	//     title: "100% Uptime guarantee",
-	//     description: "We just cannot be taken down by anyone.",
-	//     icon: <Cloud />,
-	//   },
-	//   {
-	//     title: "Multi-tenant Architecture",
-	//     description: "You can simply share passwords instead of buying new seats",
-	//     icon: <AlertOctagon />,
-	//   },
-	//   {
-	//     title: "24/7 Customer Support",
-	//     description:
-	//       "We are available a 100% of the time. Atleast our AI Agents are.",
-	//     icon: <HeartPulse />,
-	//   },
-	//   {
-	//     title: "Money back guarantee",
-	//     description:
-	//       "If you donot like EveryAI, we will convince you to like us.",
-	//     icon: <LayoutDashboard />,
-	//   },
-	//   {
-	//     title: "And everything else",
-	//     description: "I just ran out of copy ideas. Accept my sincere apologies",
-	//     icon: <FastForward />,
-	//   },
-	// ];
+	className,
+}: FeaturesSectionWithHoverEffectsProps) {
 
 	return (
-		<div className="relative z-10 flex w-full flex-row">
+		<div
+			className={cn(
+				'relative z-10 flex w-full gap-4',
+				className,
+			)}>
 			{features.map((feature, index) => (
 				<Feature key={feature.title} {...feature} index={index} />
 			))}
@@ -79,7 +46,7 @@ const Feature = ({
 	return (
 		<div
 			className={cn(
-				'group/feature relative flex w-full flex-col justify-center rounded-md border dark:border-neutral-800',
+				'group/feature relative flex w-full flex-col justify-center rounded-md border pr-2 py-2 dark:border-neutral-800',
 				(index === 0 || index === 4) && 'lg:border-l dark:border-neutral-800',
 				index < 4 && 'lg:border-b dark:border-neutral-800',
 				link && 'cursor-pointer',
