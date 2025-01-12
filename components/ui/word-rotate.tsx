@@ -15,6 +15,7 @@ interface WordRotateProps {
   duration?: number;
   framerProps?: HTMLMotionProps<"h1">;
   className?: string;
+  onChange?: (color: string) => void;
 }
 
 export function WordRotate({
@@ -27,6 +28,7 @@ export function WordRotate({
     transition: { duration: 0.25, ease: "easeOut" },
   },
   className,
+  onChange,
 }: WordRotateProps) {
   const [index, setIndex] = useState(0);
 
@@ -39,6 +41,10 @@ export function WordRotate({
     return () => clearInterval(interval);
   }, [words, duration]);
 
+  useEffect(() => {
+    onChange?.(words[index].color);
+  }, [index]);
+
   return (
     <div className="overflow-hidden py-2">
       <AnimatePresence mode="wait">
@@ -46,7 +52,7 @@ export function WordRotate({
           key={words[index].word}
           className={cn(className)}
           style={{ color: words[index].color }}
-          {...framerProps}
+          {...framerProps}  
         >
           <span className="font-semibold">{words[index].word}</span>
         </motion.h1>

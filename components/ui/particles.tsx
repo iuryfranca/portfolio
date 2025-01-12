@@ -63,7 +63,7 @@ const Particles: React.FC<ParticlesProps> = ({
 	quantity = 100,
 	staticity = 50,
 	ease = 50,
-	size = 0.4,
+	size = 1,
 	refresh = false,
 	color = '#ffffff',
 	vx = 0,
@@ -82,7 +82,7 @@ const Particles: React.FC<ParticlesProps> = ({
 		if (canvasRef.current) {
 			context.current = canvasRef.current.getContext('2d')
 		}
-		initCanvas()
+		// initCanvas()
 		animate()
 		window.addEventListener('resize', initCanvas)
 

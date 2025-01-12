@@ -53,14 +53,14 @@ const distributeLogos = (allLogos: Logo[], columnCount: number): Logo[][] => {
 const LogoColumn: React.FC<LogoColumnProps> = React.memo(
   ({ logos, index, currentTime }) => {
     const cycleInterval = 2000
-    const columnDelay = index * 200
+    const columnDelay = index * 300
     const adjustedTime = (currentTime + columnDelay) % (cycleInterval * logos.length)
     const currentIndex = Math.floor(adjustedTime / cycleInterval)
     const CurrentLogo = useMemo(() => logos[currentIndex].img, [logos, currentIndex])
 
     return (
       <motion.div
-        className="relative h-14 w-24 overflow-hidden md:h-24 md:w-48"
+        className="relative h-20 w-24 overflow-hidden md:h-24 md:w-48"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -73,7 +73,8 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
           <motion.div
             key={`${logos[currentIndex].id}-${currentIndex}`}
             className="absolute inset-0 flex items-center justify-center"
-            initial={{ y: "10%", opacity: 0, filter: "blur(8px)" }}
+            initial={{ y: "10%", opacity: 0, filter: "blur(0px)" }}
+            
             animate={{
               y: "0%",
               opacity: 1,
@@ -130,7 +131,7 @@ export function LogoCarousel({ columnCount = 2, logos }: LogoCarouselProps) {
   }, [logos, columnCount])
 
   return (
-    <div className="flex space-x-6">
+    <div className='flex h-full items-center justify-center space-x-6'>
       {logoSets.map((logos, index) => (
         <LogoColumn
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>

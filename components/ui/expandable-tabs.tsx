@@ -97,7 +97,6 @@ export function ExpandableTabs({
     setTimeout(() => {
       const element = document.getElementById(tabId)
 
-      console.log(activeTabId, element)
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
       }
