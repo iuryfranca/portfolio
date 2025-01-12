@@ -1,7 +1,6 @@
 'use client'
 
-import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import { Projects } from '@/components/projects'
 import { SkillTree } from '@/components/skill-tree'
@@ -22,8 +21,7 @@ import {
 } from 'lucide-react'
 
 export default function Home() {
-	const { theme } = useTheme()
-	const [color, setColor] = useState('#58C4DC')
+	const [color, setColor] = useState('#FFFFFF')
 
 	const handleColor = (color: string) => {
 		setColor(color)
@@ -38,13 +36,13 @@ export default function Home() {
 	] as TabItem[]
 
 	const words = [
-		{ word: 'FullStack Pleno', color: '#FFFFFF' },
-		{ word: 'Angular Pleno', color: '#F4084E' },
-		{ word: 'React Pleno', color: '#58C4DC' },
-		{ word: 'Vue Pleno', color: '#41B883' },
-		{ word: 'Mobile Júnior', color: '#ff9500' },
-		{ word: '.NET Intermediário', color: '#9d3dbc' },
-		{ word: 'Python Júnior', color: '#fbff00' },
+		{ word: 'FullStack', color: '#FFFFFF' },
+		{ word: 'Angular', color: '#F4084E' },
+		{ word: 'React', color: '#58C4DC' },
+		{ word: 'Vue', color: '#41B883' },
+		{ word: 'Mobile', color: '#ff9500' },
+		{ word: '.NET', color: '#9d3dbc' },
+		{ word: 'Python', color: '#fbff00' },
 	] as WordsProps[]
 
 	const features = [
@@ -65,12 +63,8 @@ export default function Home() {
 			description: 'Acessar o perfil do Instagram',
 			icon: <Instagram />,
 			link: 'https://www.instagram.com/iuryfrancaa/',
-		}
+		},
 	]
-
-	useEffect(() => {
-		setColor(theme === 'dark' ? '#ffffff' : '#000000')
-	}, [theme])
 
 	return (
 		<div className="relative flex min-h-screen flex-col items-center justify-start gap-8 overflow-hidden bg-gradient-to-b from-10% from-background to-slate-900">
@@ -103,9 +97,9 @@ export default function Home() {
 					</div>
 
 					<BlurFade delay={0.25 * 3} inView className="w-full">
-						<div className='flex flex-col content-start items-center gap-2 sm:max-w-none sm:flex-row'>
+						<div className="flex flex-col content-start items-center gap-2 sm:max-w-none sm:flex-row">
 							<span className=" text-black dark:text-white">
-								Tenho 5 anos de experiência e me considero{' '}
+								Tenho 4 anos de experiência e trabalho com{' '}
 							</span>
 							<WordRotate
 								className=" text-black dark:text-white"
@@ -123,11 +117,11 @@ export default function Home() {
 
 			<BlurFade delay={0.25} inView className="w-full">
 				<div
-					className='relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 rounded-xl bg-zinc-900 py-20 md:mb-10'
+					className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 rounded-xl bg-zinc-900 py-20 md:mb-10"
 					id="sobre"
 					data-section
 				>
-					<div className='flexflex-col mx-auto items-center justify-center px-4'>
+					<div className="flexflex-col mx-auto items-center justify-center px-4">
 						<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
 							Techs and Clients
 						</h2>
@@ -136,7 +130,7 @@ export default function Home() {
 
 					<Separator />
 
-					<div className='flexflex-col mx-auto items-center justify-center px-4'>
+					<div className="flexflex-col mx-auto items-center justify-center px-4">
 						<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
 							Contatos
 						</h2>
