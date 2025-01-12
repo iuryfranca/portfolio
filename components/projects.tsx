@@ -28,7 +28,7 @@ export function Projects() {
 								</p>
 							</div>
 
-							<div className="grid grid-cols-2 gap-4">
+							<div className="grid grid-rows-2 md:grid-cols-2 gap-4 md:grid-rows-none">
 								<HeroVideoDialog
 									animationStyle="from-center"
 									videoSrc="https://ik.imagekit.io/iurygfranca/the-movie-next-13/the-movie-next-13-apresentacao.mp4"
@@ -65,7 +65,7 @@ export function Projects() {
 								</p>
 							</div>
 
-							<div className="grid grid-cols-2 gap-4">
+							<div className="grid grid-rows-2 md:grid-cols-2 gap-4 md:grid-rows-none">
 								<HeroVideoDialog
 									animationStyle="from-center"
 									videoSrc="https://ik.imagekit.io/iurygfranca/the-movie-vuejs/the-movie-vue-apresentacao.mp4"
@@ -113,7 +113,7 @@ export function Projects() {
 								</p>
 							</div>
 
-							<div className="grid grid-cols-2 gap-4">
+							<div className="grid grid-rows-2 md:grid-cols-2 gap-4 md:grid-rows-none">
 								<HeroVideoDialog
 									animationStyle="from-center"
 									videoSrc="https://ik.imagekit.io/iurygfranca/project-x/project-x-apresentacao.mp4"
@@ -195,7 +195,7 @@ export function Projects() {
 								</p>
 							</div>
 
-							<div className="grid grid-cols-2 gap-4">
+							<div className="grid grid-rows-2 md:grid-cols-2 gap-4 md:grid-rows-none">
 								<HeroVideoDialog
 									animationStyle="from-center"
 									videoSrc="https://ik.imagekit.io/iurygfranca/gcom-portal/gcom-portal-avaliacao-fluxo-lista-avaliacoes.mp4"

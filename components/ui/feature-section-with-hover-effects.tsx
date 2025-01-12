@@ -20,7 +20,7 @@ export function FeaturesSectionWithHoverEffects({
 	return (
 		<div
 			className={cn(
-				'relative z-10 flex w-full gap-4',
+				'relative z-10 flex w-full flex-row gap-4',
 				className,
 			)}>
 			{features.map((feature, index) => (

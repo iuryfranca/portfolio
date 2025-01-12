@@ -11,7 +11,16 @@ import { FeaturesSectionWithHoverEffects } from '@/components/ui/feature-section
 import { Particles } from '@/components/ui/particles'
 import { WordRotate, type WordsProps } from '@/components/ui/word-rotate'
 import { Separator } from '@radix-ui/react-separator'
-import { Github, HomeIcon, Instagram, LayoutList, Linkedin, Settings, Twitter, UserSearch } from 'lucide-react'
+import {
+	Github,
+	HomeIcon,
+	Instagram,
+	LayoutList,
+	Linkedin,
+	Settings,
+	Twitter,
+	UserSearch,
+} from 'lucide-react'
 
 export default function Home() {
 	const { theme } = useTheme()
@@ -85,10 +94,10 @@ export default function Home() {
 					refresh
 				/>
 
-				<div className="flex h-full w-full max-w-80 flex-col items-center justify-center gap-12 sm:max-w-96 lg:max-w-lg">
+				<div className="flex h-full w-full max-w-80 flex-col items-center justify-center gap-12 sm:max-w-lg">
 					<div className="flexflex-col w-full items-center justify-center">
 						<BlurFade delay={0.25} inView className="w-full">
-							<h2 className="font-bold text-5xl tracking-tighter sm:text-6xl xl:text-7xl/none">
+							<h2 className="font-bold text-5xl tracking-tighter">
 								Hello World 👋
 							</h2>
 						</BlurFade>
@@ -101,7 +110,7 @@ export default function Home() {
 					</div>
 
 					<BlurFade delay={0.25 * 3} inView className="w-full">
-						<div className="flex flex-col items-center content-start gap-2 sm:max-w-none sm:flex-row">
+						<div className='flex flex-col content-start items-center gap-2 sm:max-w-none sm:flex-row'>
 							<span className=" text-black dark:text-white">
 								Tenho 5 anos de experiência e me considero{' '}
 							</span>
@@ -121,19 +130,28 @@ export default function Home() {
 
 			<BlurFade delay={0.25} inView className="w-full">
 				<div
-					className='relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 rounded-xl bg-zinc-900 py-20'
+					className='relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 rounded-xl bg-zinc-900 py-20 md:mb-10'
 					id="sobre"
 					data-section
 				>
+					<div className='flexflex-col mx-auto items-center justify-center px-4'>
+						<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
+							Techs and Clients
+						</h2>
+					</div>
 					<SkillTree />
 
 					<Separator />
 
+					<div className='flexflex-col mx-auto items-center justify-center px-4'>
+						<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
+							Contatos
+						</h2>
+					</div>
 					<FeaturesSectionWithHoverEffects
 						features={features}
-            className='flex max-w-5xl flex-col p-4 md:flex-row md:p-0'
+						className="flex max-w-5xl flex-col p-4 md:flex-row md:p-0"
 					/>
-
 				</div>
 			</BlurFade>
 		</div>

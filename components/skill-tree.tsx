@@ -1015,11 +1015,7 @@ const allLogos = [
 export function SkillTree() {
 	return (
 		<div className="mx-auto flex h-full w-full flex-col items-center space-y-8">
-			<div className="mx-auto flexflex-col items-center justify-center px-4">
-				<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
-					Techs and Clients
-				</h2>
-			</div>
+
 			<LogoCarousel columnCount={3} logos={allLogos} />
 		</div>
 	)
