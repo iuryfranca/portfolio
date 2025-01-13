@@ -3,22 +3,21 @@
 import { useState } from 'react'
 
 import { Projects } from '@/components/projects'
-import { SkillTree } from '@/components/skill-tree'
 import { BlurFade } from '@/components/ui/blur-fade'
 import { ExpandableTabs, type TabItem } from '@/components/ui/expandable-tabs'
 import { FeaturesSectionWithHoverEffects } from '@/components/ui/feature-section-with-hover-effects'
 import { Particles } from '@/components/ui/particles'
 import { WordRotate, type WordsProps } from '@/components/ui/word-rotate'
-import { Separator } from '@radix-ui/react-separator'
 import {
 	Github,
 	HomeIcon,
 	Instagram,
 	LayoutList,
 	Linkedin,
-	Settings,
 	UserSearch,
 } from 'lucide-react'
+import { SkillTreeTechs } from '@/components/skill-tree-techs'
+import { SkillTreeClients } from '@/components/skill-tree-clients'
 
 export default function Home() {
 	const [color, setColor] = useState('#FFFFFF')
@@ -32,7 +31,7 @@ export default function Home() {
 		{ type: 'separator', id: 'separator-1' },
 		{ title: 'Projetos', icon: LayoutList, id: 'projects' },
 		{ title: 'Sobre', icon: UserSearch, id: 'sobre' },
-		{ title: 'Settings', icon: Settings, id: 'settings' },
+		// { title: 'Settings', icon: Settings, id: 'settings' },
 	] as TabItem[]
 
 	const words = [
@@ -67,9 +66,9 @@ export default function Home() {
 	]
 
 	return (
-		<div className="relative flex min-h-screen flex-col items-center justify-start gap-8 overflow-hidden bg-gradient-to-b from-10% from-background to-slate-900">
+		<div className="relative flex min-h-screen flex-col items-center justify-start gap-8 overflow-hidden bg-gradient-to-b from-20% from-background via-slate-900 to-90% to-background">
 			<div
-				className="relative flex h-[850px] w-full flex-col items-center justify-center md:h-[700px]"
+				className="relative flex h-screen w-full flex-col items-center justify-center"
 				id="home"
 				data-section
 			>
@@ -117,28 +116,43 @@ export default function Home() {
 
 			<BlurFade delay={0.25} inView className="w-full">
 				<div
-					className="relative mx-auto flex w-full max-w-7xl flex-col items-center justify-center gap-8 rounded-xl bg-zinc-900 py-20 md:mb-10"
+					className="relative mx-auto flex w-full flex-col items-center justify-center gap-16 pt-16 md:rounded-xl md:pb-16"
 					id="sobre"
 					data-section
 				>
-					<div className="flexflex-col mx-auto items-center justify-center px-4">
-						<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
-							Techs and Clients
-						</h2>
-					</div>
-					<SkillTree />
+					<div className="flex flex-col items-center justify-center gap-24 md:flex-row">
+						<div className="flex w-full flex-col items-center justify-center gap-4">
+							<div className="flexflex-col mx-auto items-center justify-center px-4">
+								<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
+									Tecnologias
+								</h2>
+							</div>
 
-					<Separator />
+							<SkillTreeTechs />
+						</div>
 
-					<div className="flexflex-col mx-auto items-center justify-center px-4">
-						<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
-							Contatos
-						</h2>
+						<div className="flex w-full flex-col items-center justify-center gap-4">
+							<div className="flexflex-col mx-auto items-center justify-center px-4">
+								<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
+									Clientes
+								</h2>
+							</div>
+
+							<SkillTreeClients />
+						</div>
 					</div>
-					<FeaturesSectionWithHoverEffects
-						features={features}
-						className="flex max-w-5xl flex-col p-4 md:flex-row md:p-0"
-					/>
+
+					<div className="flex w-full flex-col items-center justify-center gap-4">
+						<div className="flexflex-col mx-auto items-center justify-center px-4">
+							<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
+								Contatos
+							</h2>
+						</div>
+						<FeaturesSectionWithHoverEffects
+							features={features}
+							className="flex max-w-6xl flex-col p-4 md:flex-row md:p-0"
+						/>
+					</div>
 				</div>
 			</BlurFade>
 		</div>

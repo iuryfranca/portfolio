@@ -6,6 +6,8 @@ import React from 'react'
 import { BlurFade } from './ui/blur-fade'
 import { FeaturesSectionWithHoverEffects } from './ui/feature-section-with-hover-effects'
 import { Separator } from './ui/separator'
+import { AnimatedShinyText } from './ui/animated-shiny-text'
+import { cn } from '@/lib/utils'
 
 export function Projects() {
 	const data = [
@@ -15,12 +17,26 @@ export function Projects() {
 				<div className="flex flex-col gap-8">
 					<BlurFade delay={0.25} inView>
 						<div className="flex flex-col">
-							<div className="flex flex-col gap-2">
-								<h2 className='mb-3 w-full max-w-4xl font-semibold text-lg md:text-3xl'>
-									the-movie-db-challenge-next-13
-								</h2>
+							<div className="flex flex-col gap-8">
+								<div className="flex flex-col md:flex-row justify-start gap-2">
+									<h2 className="max-w-4xl font-semibold text-lg md:text-3xl">
+										the-movie-db-challenge-next-13
+									</h2>
 
-								<p className='mb-8 font-normal text-muted-foreground text-xs md:text-sm'>
+									<div className="z-10 flex items-center justify-start">
+										<div
+											className={cn(
+												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+											)}
+										>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+												<span>personal project 🎈</span>
+											</AnimatedShinyText>
+										</div>
+									</div>
+								</div>
+
+								<p className="mb-8 font-normal text-muted-foreground text-xs md:text-sm">
 									Nesse projeto eu estava reaprendendo desenvolvimento web
 									depois de 1 ano longe da área. Coloquei todo o meu foco em
 									tecnologias mais populares da época e fiz esse pequeno e
@@ -28,7 +44,7 @@ export function Projects() {
 								</p>
 							</div>
 
-							<div className='grid grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-none'>
+							<div className="grid grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-none">
 								<HeroVideoDialog
 									animationStyle="from-center"
 									videoSrc="https://ik.imagekit.io/iurygfranca/the-movie-next-13/the-movie-next-13-apresentacao.mp4"
@@ -54,18 +70,32 @@ export function Projects() {
 
 					<BlurFade delay={0.25} inView>
 						<div className="flex flex-col">
-							<div className="flex flex-col gap-2">
-								<h2 className='mb-3 w-full max-w-4xl font-semibold text-lg md:text-3xl'>
-									the-movie-db-challenge-vue3
-								</h2>
+							<div className="flex flex-col gap-8">
+								<div className="flex flex-col md:flex-row justify-start gap-2">
+									<h2 className="max-w-4xl font-semibold text-lg md:text-3xl">
+										the-movie-db-challenge-vue3
+									</h2>
 
-								<p className='mb-8 font-normal text-muted-foreground text-xs md:text-sm'>
+									<div className="z-10 flex items-center justify-start">
+										<div
+											className={cn(
+												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+											)}
+										>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+												<span>personal project 🎈</span>
+											</AnimatedShinyText>
+										</div>
+									</div>
+								</div>
+
+								<p className="mb-8 font-normal text-muted-foreground text-xs md:text-sm">
 									A ideia foi fazer a mesma aplicação do projeto anterior, mas
 									agora em Vue 3.
 								</p>
 							</div>
 
-							<div className='grid grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-none'>
+							<div className="grid grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-none">
 								<HeroVideoDialog
 									animationStyle="from-center"
 									videoSrc="https://ik.imagekit.io/iurygfranca/the-movie-vuejs/the-movie-vue-apresentacao.mp4"
@@ -94,10 +124,24 @@ export function Projects() {
 				<div className="flex flex-col gap-8">
 					<BlurFade delay={0.25} inView>
 						<div className="flex flex-col">
-							<div className="flex flex-col gap-2">
-								<h2 className="w-full max-w-4xl font-semibold text-lg md:text-3xl mb-3">
-									project-x
-								</h2>
+							<div className="flex flex-col gap-8">
+								<div className="flex flex-col md:flex-row justify-start gap-2">
+									<h2 className="max-w-4xl font-semibold text-lg md:text-3xl">
+										project-x
+									</h2>
+
+									<div className="z-10 flex items-center justify-start">
+										<div
+											className={cn(
+												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+											)}
+										>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+												<span>personal project 🎈</span>
+											</AnimatedShinyText>
+										</div>
+									</div>
+								</div>
 
 								<p className="text-muted-foreground text-xs md:text-sm font-normal">
 									Aqui eu fui um pouco mais audacioso e fiz um projeto um pouco
@@ -146,32 +190,6 @@ export function Projects() {
 							</div>
 						</div>
 					</BlurFade>
-
-					<Separator />
-
-					<BlurFade delay={0.25} inView>
-						<div className="flex flex-col">
-							<div className="flex flex-col gap-2">
-								<h2 className="w-full max-w-4xl font-semibold text-lg md:text-3xl mb-3">
-									the-movie-db-challenge-vue3
-								</h2>
-
-								<p className="text-muted-foreground text-xs md:text-sm font-normal mb-8">
-									A ideia foi fazer a mesma aplicação do projeto anterior, mas
-									agora em Vue 3.
-								</p>
-							</div>
-
-							<div className="relative flex flex-col gap-4">
-								<HeroVideoDialog
-									animationStyle="from-center"
-									videoSrc="https://ik.imagekit.io/iurygfranca/the-movie-vuejs/the-movie-vue-apresentacao.mp4"
-									thumbnailSrc="https://ik.imagekit.io/iurygfranca/the-movie-vuejs/the-movie-vue-apresentacao.mp4/ik-thumbnail.jpg"
-									thumbnailAlt="Hero Video"
-								/>
-							</div>
-						</div>
-					</BlurFade>
 				</div>
 			),
 		},
@@ -181,10 +199,24 @@ export function Projects() {
 				<div className="flex flex-col gap-8">
 					<BlurFade delay={0.25} inView>
 						<div className="flex flex-col">
-							<div className="flex flex-col gap-2">
-								<h2 className="w-full max-w-4xl font-semibold text-lg md:text-3xl mb-3">
-									Gcom Portal de Avaliações
-								</h2>
+							<div className="flex flex-col gap-8">
+								<div className="flex flex-col md:flex-row justify-start gap-2">
+									<h2 className="max-w-4xl font-semibold text-lg md:text-3xl">
+										Gcom Portal de Avaliações
+									</h2>
+
+									<div className="z-10 flex items-center justify-start">
+										<div
+											className={cn(
+												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+											)}
+										>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
+												<span>professional project ✨</span>
+											</AnimatedShinyText>
+										</div>
+									</div>
+								</div>
 
 								<p className="text-muted-foreground text-xs md:text-sm font-normal">
 									Esse foi um projeto interno da Gcom. O objetivo era criar um
@@ -228,8 +260,6 @@ export function Projects() {
 							</div>
 						</div>
 					</BlurFade>
-
-					<Separator />
 				</div>
 			),
 		},
