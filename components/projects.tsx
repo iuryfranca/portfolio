@@ -18,7 +18,7 @@ export function Projects() {
 					<BlurFade delay={0.25} inView>
 						<div className="flex flex-col">
 							<div className="flex flex-col gap-8">
-								<div className="flex flex-col md:flex-row justify-start gap-2">
+								<div className="flex flex-col justify-start gap-2 md:flex-row">
 									<h2 className="max-w-4xl font-semibold text-lg md:text-3xl">
 										the-movie-db-challenge-next-13
 									</h2>
@@ -29,8 +29,8 @@ export function Projects() {
 												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
 											)}
 										>
-											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-												<span>personal project 🎈</span>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out">
+												<span>projeto pessoal 🎈</span>
 											</AnimatedShinyText>
 										</div>
 									</div>
@@ -82,8 +82,8 @@ export function Projects() {
 												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
 											)}
 										>
-											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-												<span>personal project 🎈</span>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out">
+												<span>projeto pessoal 🎈</span>
 											</AnimatedShinyText>
 										</div>
 									</div>
@@ -136,8 +136,8 @@ export function Projects() {
 												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
 											)}
 										>
-											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-												<span>personal project 🎈</span>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out">
+												<span>projeto pessoal 🎈</span>
 											</AnimatedShinyText>
 										</div>
 									</div>
@@ -211,8 +211,8 @@ export function Projects() {
 												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
 											)}
 										>
-											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
-												<span>professional project ✨</span>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out">
+												<span>projeto profissional ✨</span>
 											</AnimatedShinyText>
 										</div>
 									</div>
