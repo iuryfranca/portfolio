@@ -17,7 +17,7 @@ import {
 	UserSearch,
 } from 'lucide-react'
 import { SkillTreeTechs } from '@/components/skill-tree-techs'
-import { SkillTreeClients } from '@/components/skill-tree-clients'
+// import { SkillTreeClients } from '@/components/skill-tree-clients'
 
 export default function Home() {
 	const [color, setColor] = useState('#FFFFFF')
@@ -131,7 +131,7 @@ export default function Home() {
 							<SkillTreeTechs />
 						</div>
 
-						<div className="flex w-full flex-col items-center justify-center gap-4">
+						{/* <div className="flex w-full flex-col items-center justify-center gap-4">
 							<div className="flexflex-col mx-auto items-center justify-center px-4">
 								<h2 className="w-full max-w-3xl text-center text-lg md:text-2xl">
 									Clientes
@@ -139,7 +139,7 @@ export default function Home() {
 							</div>
 
 							<SkillTreeClients />
-						</div>
+						</div> */}
 					</div>
 
 					<div className="flex w-full flex-col items-center justify-center gap-4">

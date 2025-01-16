@@ -260,6 +260,58 @@ export function Projects() {
 							</div>
 						</div>
 					</BlurFade>
+
+					<BlurFade delay={0.25} inView>
+						<div className="flex flex-col">
+							<div className="flex flex-col gap-8">
+								<div className="flex flex-col md:flex-row justify-start gap-2">
+									<h2 className="max-w-4xl font-semibold text-lg md:text-3xl">
+										Chame Senha Digital
+									</h2>
+
+									<div className="z-10 flex items-center justify-start">
+										<div
+											className={cn(
+												'group rounded-full border border-black/5 bg-neutral-100 text-base text-white transition-all ease-in hover:cursor-pointer hover:bg-neutral-200 dark:border-white/5 dark:bg-neutral-900 dark:hover:bg-neutral-800',
+											)}
+										>
+											<AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out">
+												<span>projeto profissional ✨</span>
+											</AnimatedShinyText>
+										</div>
+									</div>
+								</div>
+
+								<p className="text-muted-foreground text-xs md:text-sm font-normal">
+									Esse foi um projeto interno da Gcom. O objetivo era criar um
+									app para avisar ao cliente quando seu pedido estiver pronto
+									apartir de um QRCode. Nossa aplicação foi feita para receber
+									eventos do nosso cliente e assim mostrar em tempo real o
+									momento que o pedido está pronto.
+								</p>
+							</div>
+
+							<div className="grid grid-rows-2 md:grid-cols-2 gap-4 md:grid-rows-none">
+								<HeroVideoDialog
+									animationStyle="from-center"
+									videoSrc="https://www.youtube.com/embed/mvCNhXe3OEs?si=4dKIFE9mVdbsnZAQ"
+									thumbnailSrc="https://i.ytimg.com/vi/mvCNhXe3OEs/maxresdefault.jpg"
+									thumbnailAlt="Hero Video"
+								/>
+
+								<FeaturesSectionWithHoverEffects
+									features={[
+										{
+											title: 'GCOM',
+											description: 'Saiba mais sobre a GCOM',
+											icon: <ExternalLink />,
+											link: 'https://gcom.com.br/saas/',
+										},
+									]}
+								/>
+							</div>
+						</div>
+					</BlurFade>
 				</div>
 			),
 		},
